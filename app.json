@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "ContainerGo Driver",
+    "slug": "container-go",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "container-go",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "contentFit": "fill",
+      "backgroundColor": "#0A9345"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "plugins": [
+      "./plugins/DisableAvoidingViewAndroid.js",
+      "expo-router",
+      "expo-font",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "development"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          },
+          "android": {
+          }
+        }
+      ],
+      "expo-localization",
+      "react-native-image-marker",
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
+          "enableMicrophonePermission": true,
+          "microphonePermissionText": "$(PRODUCT_NAME) needs access to your Microphone."
+        }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoibjB4Z2cwNCIsImEiOiJjbTBmMXRmZmQwOHNsMmlzN2w4NG12YngxIn0.AfMcfbTq5ne-hewSOdSzng"
+        }
+      ],
+      "react-native-map-link"
+    ],
+    "updates": {
+      "url": "https://u.expo.dev/f23475ac-3cca-4d4a-bc18-0dd86f5dede9"
+    }
+  }
+}
